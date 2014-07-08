@@ -8,7 +8,7 @@
 	{
 		echo "<li>"; 
 			echo Phalcon\Tag::linkTo("option/show/". $question->id, $question->name);
-			echo Phalcon\Tag::linkTo('question/delete/' . $question->id, '<img src="img/delete.png" width="20" />'); 
+			echo Phalcon\Tag::linkTo(array('question/delete/' . $question->id, '<img src="img/delete.png" width="20" />', 'onclick' => 'return confirm(\'Weet je het zeker?\')'))); 
 		echo "</li>";
 	}
 
