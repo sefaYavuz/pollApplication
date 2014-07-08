@@ -1,6 +1,6 @@
 <h1>Vraag toevoegen</h1>
 
-<?=Phalcon\Tag::form(array("method" => "post"));?>
+<form action="" method="post">
 	<p>
 		<label for="Vraag">Vraag: </label>
 		<?=Phalcon\Tag::textField("name");?>
@@ -8,6 +8,6 @@
 	<p>
 		<?=Phalcon\Tag::linkTo('', '&laquo Ga terug')?>
 		&nbsp;
-		<?=Phalcon\Tag::submitButton("submit")?>
+		<?=Phalcon\Tag::submitButton(array("Toevoegen", 'class' => 'submitButton'))?>
 	</p>
 </form>
