@@ -6,7 +6,10 @@
 	
 	foreach($questions as $question)
 	{
-		echo "<li>" .Phalcon\Tag::linkTo("option/show/". $question->id, $question->name). "</li>";
+		echo "<li>"; 
+			echo Phalcon\Tag::linkTo("option/show/". $question->id, $question->name);
+			echo Phalcon\Tag::linkTo('question/delete/' . $question->id, '<img src="img/delete.png" width="20" />'); 
+		echo "</li>";
 	}
 
 	echo "<p>".Phalcon\Tag::linkTo('question/add', 'Voeg een vraag toe &raquo')."</p>";
