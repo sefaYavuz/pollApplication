@@ -1,0 +1,55 @@
+html, body { padding: 0; font-family: 'Helvetica'; }
+
+#wrapper { margin-top: 20px; padding: 15px; width: 960px; background: #CCC; margin: 0 auto; color: #333333; }
+
+#wrapper h1 { color: #B85353; text-transform: uppercase; }
+#wrapper p { color: #333333; }
+#wrapper a { color: #3399FF; text-decoration: none; }
+#wrapper a:hover { text-decoration: underline; }
+
+#wrapper .submitButton { cursor: pointer; padding: 15px; background-color: #3399FF; color: white; border: none; text-transform: uppercase; letter-spacing: 1px; font-weight: bold;}
+
+#wrapper #optionsContainer .optionNames { color: #B85353; font-size: 18px; font-weight: bold; }
+#wrapper #optionsContainer #actionsContainer img { margin-right: 20px; }
+
+progress[value] { appearance: none; border: none; width: 50%; height: 20px; background-color: #3399FF; border-radius: 3px; color: #3399FF; position: relative; margin: 0 0 1.5em; }
+progress[value]::-webkit-progress-bar {	background-color: whiteSmoke; border-radius: 3px; }
+progress[value]::-webkit-progress-value { position: relative; background-size: 35px 20px, 100% 100%, 100% 100%; border-radius:3px; }
+progress[value]::-moz-progress-bar { background-color: #3399FF; }
+.progress-bar {	background-color: whiteSmoke; border-radius: 3px; box-shadow: 0 2px 3px rgba(0,0,0,.5) inset; width: 100%; height: 20px; }
+.progress-bar span { background-color: #3399FF;	border-radius: 3px;	display: block;	text-indent: -9999px; }
+p[data-value] { position: relative; }
+p[data-value]:after { content: attr(data-value) '%'; position: absolute; right:0; }
+
+.html5::-webkit-progress-value,
+.python::-webkit-progress-value  {
+	background-color: #3399FF;
+}
+
+.css3::-webkit-progress-value,
+.php::-webkit-progress-value 
+{
+	background-color: #3399FF;
+}
+
+.jquery::-webkit-progress-value,
+.node-js::-webkit-progress-value 
+{
+	background-color: #3399FF;
+}
+
+.html5::-moz-progress-bar,
+.php::-moz-progress-bar {
+	background-color: #3399FF;
+}
+
+.css3::-moz-progress-bar,
+.php::-moz-progress-bar {
+{
+	background-color: #3399FF;
+}
+
+.jquery::-moz-progress-bar,
+.node-js::-moz-progress-bar {
+	background-image: #3399FF;
+}
