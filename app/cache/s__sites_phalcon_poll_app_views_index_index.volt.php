@@ -3,7 +3,7 @@
 <p>Klik op een vraag om door te gaan: </p>
 
 <?php
-	
+
 	foreach($questions as $question)
 	{
 		echo "<li>" .Phalcon\Tag::linkTo("option/show/". $question->id, $question->name). "</li>";

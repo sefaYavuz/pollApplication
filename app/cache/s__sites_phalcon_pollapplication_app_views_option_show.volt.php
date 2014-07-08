@@ -21,7 +21,7 @@ foreach($options as $option)
 
 		echo "<div id='actionsContainer'>";
 			echo Phalcon\Tag::linkTo('option/vote/' . $option->id, '<img src="../../img/vote.png" width="20" />');
-			echo Phalcon\Tag::linkTo('option/delete/' . $option->id, '<img src="../../img/delete.png" width="20" />');
+			echo Phalcon\Tag::linkTo(array('option/delete/' . $option->id, '<img src="../../img/delete.png" width="20" />', 'onclick' => 'return confirm(\'Weet je het zeker?\')'));
 			echo Phalcon\Tag::linkTo('option/edit/' . $option->id, '<img src="../../img/edit.png" width="20" />');
 			
 		echo "</div>";

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>Phalcon PHP Framework</title>
+		<?php echo $this->tag->getTitle(); ?>
 		<?php echo $this->tag->stylesheetLink('css/style.css'); ?>
 	</head>
 	<body>

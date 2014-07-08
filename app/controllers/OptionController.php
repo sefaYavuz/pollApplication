@@ -2,6 +2,10 @@
 
 class OptionController extends \Phalcon\Mvc\Controller
 {
+    public function initialize()
+    {
+        $this->tag->setTitle(" - Opties");
+    }
 
     public function indexAction()
     {
@@ -11,6 +15,10 @@ class OptionController extends \Phalcon\Mvc\Controller
 	public function showAction($questionId)
     {
     	$this->view->question 	= Questions::findFirstById($questionId);
+
+        $question = Questions::findFirstById($questionId);
+
+        $this->tag->prependTitle($question->name);
 
     	$this->view->options 	= Options::find(array(
     		"question_id = ".$questionId."",
@@ -37,6 +45,8 @@ class OptionController extends \Phalcon\Mvc\Controller
     public function addAction($questionId)
     {
     	$this->view->question 	= Questions::findFirstById($questionId);
+
+        $this->tag->prependTitle("Toevoegen");
 
     	if($this->request->isPost())
     	{
@@ -75,6 +85,10 @@ class OptionController extends \Phalcon\Mvc\Controller
     public function editAction($optionId)
     {
     	$this->view->option = Options::findFirstById($optionId);
+
+        $option = Options::findFirstById($optionId);
+
+        $this->tag->prependTitle($option->name);
 
     	if($this->request->isPost())
     	{

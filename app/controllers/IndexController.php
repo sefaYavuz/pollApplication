@@ -2,6 +2,10 @@
 
 class IndexController extends ControllerBase
 {
+	public function initialize()
+    {
+        $this->tag->setTitle("Poll Applicatie");
+    }
 
     public function indexAction()
     {

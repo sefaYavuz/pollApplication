@@ -2,6 +2,10 @@
 
 class QuestionController extends \Phalcon\Mvc\Controller
 {
+    public function initialize()
+    {
+        $this->tag->setTitle(" - Vragen");
+    }
 
     public function indexAction()
     {
@@ -10,6 +14,8 @@ class QuestionController extends \Phalcon\Mvc\Controller
 
     public function addAction()
     {
+        $this->tag->prependTitle("Toevoegen");
+
     	if($this->request->isPost())
     	{
     		$question = new Questions();
